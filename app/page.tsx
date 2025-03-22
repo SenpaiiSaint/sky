@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -27,9 +28,11 @@ export default function Home() {
           <p className="text-white text-xl mb-8 max-w-2xl">
             With Sky, experience seamless task management and real-time collaboration that propels your projects forward.
           </p>
-          <button className="cursor-pointer bg-white text-blue-500 font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-blue-600 transition duration-300">
-            Get Started
-          </button>
+          <Link href="/login">
+            <button className="cursor-pointer bg-white text-blue-500 font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-blue-600 transition duration-300">
+              Get Started
+            </button>
+          </Link>
         </section>
 
         {/* Integrated Features / "Why Choose Sky?" Section */}
