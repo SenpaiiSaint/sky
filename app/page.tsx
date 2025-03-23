@@ -15,7 +15,8 @@ const fadeIn = {
   visible: { opacity: 1, transition: { duration: 0.8 } },
 };
 
-// Automatic Carousel component for companies with proper typing
+
+
 function Carousel() {
   const carousel = useRef<HTMLDivElement | null>(null);
   const [width, setWidth] = useState(0);
@@ -27,14 +28,15 @@ function Carousel() {
     { id: 3, src: "/company3.png", alt: "Company 3" },
     { id: 4, src: "/company4.png", alt: "Company 4" },
     { id: 5, src: "/company5.png", alt: "Company 5" },
+    { id: 6, src: "/company6.png", alt: "Company 6" },
+    { id: 6, src: "/company7.png", alt: "Company 7" },
+    { id: 6, src: "/company8.png", alt: "Company 8" },
   ];
 
-  // Duplicate companies to achieve a seamless marquee effect
   const companiesExtended = [...companies, ...companies];
 
   useEffect(() => {
     if (carousel.current) {
-      // Set width to half of the total scroll width (one complete set of logos)
       setWidth(carousel.current.scrollWidth / 2);
     }
   }, []);
@@ -44,7 +46,7 @@ function Carousel() {
       <motion.div
         animate={{ x: -width }}
         transition={{
-          duration: 20,
+          duration: 35,
           repeat: Infinity,
           ease: "linear",
           repeatType: "loop"
@@ -63,6 +65,10 @@ function Carousel() {
     </motion.div>
   );
 }
+
+
+
+
 
 
 export default function Home() {
@@ -160,7 +166,7 @@ export default function Home() {
             >
               <h4 className="text-xl font-semibold text-white">Scalable Solutions</h4>
               <p className="mt-2 text-gray-200">
-                Whether you're a startup or an enterprise, Sky adapts to your evolving project needs.
+                Whether you're a Startup or an Enterprise, Sky adapts to your evolving project needs.
               </p>
             </motion.div>
           </div>
