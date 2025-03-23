@@ -120,7 +120,7 @@ export default function Home() {
           </motion.p>
           <Link href="/login">
             <motion.a
-              className="cursor-pointer bg-white text-blue-500 font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-blue-600 transition duration-300"
+              className="cursor-pointer bg-white text-black font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-stone-300 transition duration-300"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               variants={fadeUp}
@@ -174,33 +174,43 @@ export default function Home() {
 
         {/* Testimonials Section */}
         <motion.section
-          className="container mx-auto px-6 py-16"
-          variants={fadeIn}
-        >
-          <motion.div className="text-center mb-10" variants={fadeUp}>
-            <h3 className="text-3xl font-bold text-white">What Our Clients Say</h3>
-          </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <motion.div className="p-6 bg-black/40 rounded-lg shadow-lg" variants={fadeUp}>
-              <p className="text-gray-200 italic">
-                "Sky transformed the way we manage projects. Our team collaboration has never been smoother."
-              </p>
-              <p className="mt-4 text-white font-semibold">— Sarah L.</p>
-            </motion.div>
-            <motion.div className="p-6 bg-black/40 rounded-lg shadow-lg" variants={fadeUp}>
-              <p className="text-gray-200 italic">
-                "The intuitive interface and real-time updates keep us ahead of the competition."
-              </p>
-              <p className="mt-4 text-white font-semibold">— Mike T.</p>
-            </motion.div>
-            <motion.div className="p-6 bg-black/40 rounded-lg shadow-lg" variants={fadeUp}>
-              <p className="text-gray-200 italic">
-                "A scalable solution that adapts perfectly as our business grows."
-              </p>
-              <p className="mt-4 text-white font-semibold">— Emily R.</p>
-            </motion.div>
-          </div>
-        </motion.section>
+  className="container mx-auto px-6 py-16"
+  variants={fadeIn}
+>
+  <motion.div className="text-center mb-10" variants={fadeUp}>
+    <h3 className="text-3xl font-bold text-white">What Our Clients Say</h3>
+  </motion.div>
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <motion.div className="p-6 bg-black/40 rounded-lg shadow-lg" variants={fadeUp}>
+      <p className="text-gray-200 italic">
+        "Sky transformed the way we manage projects. Our team collaboration has never been smoother, and the real-time insights have revolutionized our workflow."
+      </p>
+      <div className="mt-4">
+        <p className="text-white font-semibold">Scott S.</p>
+        <p className="text-sm text-stone-300">- Project Manager at HashiCorp</p>
+      </div>
+    </motion.div>
+    <motion.div className="p-6 bg-black/40 rounded-lg shadow-lg" variants={fadeUp}>
+      <p className="text-gray-200 italic">
+        "The intuitive interface and real-time updates keep us ahead of the competition. I especially appreciate the in-depth analytics and customizable features."
+      </p>
+      <div className="mt-4">
+        <p className="text-white font-semibold">Sarah L.</p>
+        <p className="text-sm text-stone-300">- CEO at Betterment</p>
+      </div>
+    </motion.div>
+    <motion.div className="p-6 bg-black/40 rounded-lg shadow-lg" variants={fadeUp}>
+      <p className="text-gray-200 italic">
+        "A scalable solution that adapts perfectly as our business grows. The customer service is top-notch, making us feel supported every step of the way."
+      </p>
+      <div className="mt-4">
+        <p className="text-white font-semibold">Emily R.</p>
+        <p className="text-sm text-stone-300">- Founder of BNP PARIBAS</p>
+      </div>
+    </motion.div>
+  </div>
+</motion.section>
+
 
         {/* Companies Carousel Section (positioned near the footer) */}
         <motion.section
